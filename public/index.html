@@ -5,13 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="../src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+   
 </head>
-<body class="bg-gray-100 p-4">
-    <div class="max-w-md mx-auto bg-white p-8 shadow-md rounded-md">
-      <h1 class="text-2xl font-semibold mb-4">GitHub Repositories</h1>
-      <ul id="repo-list" class="list-disc pl-4"></ul>
+<body class="bg-black text-white p-8 md:p-16">
+  <div class="md:flex">
+    <div  class="md:w-6/12">
+      <h1 class="text-4xl">Nnenna Udefi</h1>
+      <h2 class="text-1xl mt-2 mb-6">Frontend Developer</h2>
+      <p class="text-xs mx:8 tracking-wider md:w-25">
+        Hello, I'm Nnenna, a frontend developer. I love problem solving
+        and critical thinking, I live for the challenge, I use coding as a
+        tool to solve problems. I am currently interested in building
+        interactive UI's for game development.
+      </p>
+
+      <div class="my-10">
+        <i class="fab fa-github-square" class="ml-6"><a href="https://github.com/Nnenna-udefi" id="profile-link" class="px-2 text-xs">Github</a></i>
+        <i class="fab fa-linkedin" class="ml-6"><a href="https://linkedin/in/nnennaudefi" id="profile-link" class="px-2 text-xs">Linkedin</a></i>
+        <i class="fas fa-at" class="ml-6"><a href="miriamudefi@gmail.com" id="profile-link" class="px-2 text-xs">Email</a></i>
+      </div>
     </div>
+
+    <div class="md:w-4/12 bg-black">
+      <h1 class="text-2xl font-semibold mb-4">
+        <i class="fas fa-code text-sm">
+          <span class="ml-2 text-xl">Github</span>
+        </i>
+        <i class="fas fa-arrow-right text-sm float-right"></i>
+      </h1>
+      <ul id="repo-list" class="decoration-none pl-4 ">
+        <li id="repo-item bg-gray-500 p-4"></li>
+      </ul>
+    </div>
+
+  </div>
+  
+
     <script type="module" src="main.js"></script>
 </body>
 </html>
