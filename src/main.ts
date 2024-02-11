@@ -46,12 +46,12 @@ async function displayReposById() {
             // Display filtered repositories
             filteredRepos.forEach((repo) => {
                 // Create a string with repository information
-                const repoInfo = `<div class="tracking-wide text-gray-200 pb-3">${repo.language.toUpperCase()}</div>
+                const repoInfo = `<div class="tracking-wide text-off-white pb-3">${repo.language.toUpperCase()}</div>
                       <div class="text-2xl text-white font-bold pb-3">${repo.name.charAt(0).toUpperCase() + repo.name.slice(1)}</div>
-                      <div class="flex text-gray-500 justify-between pb-3"><p class='md:mr-2'>Last Updated: ${formatDate(repo.updated_at)}</p>
+                      <div class="flex text-gray-black justify-between pb-3"><p class='md:mr-2'>Last Updated: ${formatDate(repo.updated_at)}</p>
                       <p>Created At: ${formatDate(repo.created_at)}</p>
                       </div>
-                      <div class='flex text-gray-500'>
+                      <div class='flex text-gray-black'>
                       <img src="./images/Symbol.png" alt="symbol-link" width='10px' class="mr-2">
                       <a href="${generateGithubLink(repo.git_url)}" target="_blank" class='font-medium'>Github</a>
                       </div>`;
@@ -61,7 +61,7 @@ async function displayReposById() {
                 const repoItem = document.createElement('li');
 
                 // Add classes to the repoItem based on the repository information
-                repoItem.classList.add('bg-gray-900', 'p-6', 'my-4', 'text-xs', 'rounded');
+                repoItem.classList.add('bg-off-black', 'p-6', 'my-4', 'text-xs', 'rounded');
 
                 // Assign the combined repository information to textContent
                 repoItem.innerHTML = repoInfo;
