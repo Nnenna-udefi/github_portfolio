@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
+// import { DateTimeFormatOptions } from 'intl';
 const username = 'Nnenna-udefi';
 // fetch the repositories for a given page
 function getRepositories(page) {
@@ -59,20 +60,15 @@ function displayReposById() {
 }
 // function to format date
 function formatDate(dateString) {
-    const options = { month: 'short', year: 'numeric', day: 'numeric' };
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const date = new Date(dateString);
-    return date.toLocaleDateString(undefined, options);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
 }
 // function to generate Github link
 function generateGithubLink(gitUrl) {
     return gitUrl; // Return the GitHub URL directly
 }
-// function generateGithubLink(gitUrl: string): string {
-//     const githubLink = document.createElement('a')
-//     githubLink.href = gitUrl;
-//     githubLink.textContent = 'Github';
-//     const container = document.createElement('div');
-//     container.appendChild(githubLink);
-//     return container.innerHTML;
-// }
 displayReposById();

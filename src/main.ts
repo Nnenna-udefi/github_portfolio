@@ -1,7 +1,7 @@
 // main.ts - file for TypeScript logic
 
 import axios from 'axios';
-import { DateTimeFormatOptions } from 'intl';
+// import { DateTimeFormatOptions } from 'intl';
 
 const username = 'Nnenna-udefi';
 
@@ -68,9 +68,14 @@ async function displayReposById() {
 
 // function to format date
 function formatDate(dateString: string): string {
-    const options: DateTimeFormatOptions = { month: 'short', year: 'numeric', day: 'numeric' };
+    const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
     const date = new Date(dateString);
-    return date.toLocaleDateString(undefined, options);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+
+    return `${month} ${day}, ${year}`;
 }
 
 // function to generate Github link
