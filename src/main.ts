@@ -1,6 +1,7 @@
 // main.ts - file for TypeScript logic
 
 import axios from 'axios';
+console.log(axios);
 
 const username = 'Nnenna-udefi';
 
